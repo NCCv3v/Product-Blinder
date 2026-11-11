@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Product Blinder
+Comment=Local AI product evaluation workbench
+Exec=product-blinder-desktop
+Icon=product-blinder
+Terminal=false
+Categories=Development;Utility;

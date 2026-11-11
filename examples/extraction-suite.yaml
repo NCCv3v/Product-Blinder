@@ -1,0 +1,319 @@
+{
+  "name": "Synthetic receipt JSON extraction",
+  "version": "0.2",
+  "description": "Synthetic local fixture. Twelve receipt JSON extraction cases with schema and expected values.",
+  "cases": [
+    {
+      "id": "extract-0",
+      "prompt": "Extract a receipt to JSON: merchant Demo Store 1, total HKD 100.00. Return only merchant, amount_hkd, currency.",
+      "expected": "{\"merchant\":\"Demo Store 1\",\"amount_hkd\":100.0,\"currency\":\"HKD\"}",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "merchant": {
+            "type": "string"
+          },
+          "amount_hkd": {
+            "type": "number",
+            "minimum": 0
+          },
+          "currency": {
+            "const": "HKD"
+          }
+        },
+        "required": [
+          "merchant",
+          "amount_hkd",
+          "currency"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "id": "extract-1",
+      "prompt": "Extract a receipt to JSON: merchant Demo Store 2, total HKD 112.50. Return only merchant, amount_hkd, currency.",
+      "expected": "{\"merchant\":\"Demo Store 2\",\"amount_hkd\":112.5,\"currency\":\"HKD\"}",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "merchant": {
+            "type": "string"
+          },
+          "amount_hkd": {
+            "type": "number",
+            "minimum": 0
+          },
+          "currency": {
+            "const": "HKD"
+          }
+        },
+        "required": [
+          "merchant",
+          "amount_hkd",
+          "currency"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "id": "extract-2",
+      "prompt": "Extract a receipt to JSON: merchant Demo Store 3, total HKD 125.00. Return only merchant, amount_hkd, currency.",
+      "expected": "{\"merchant\":\"Demo Store 3\",\"amount_hkd\":125.0,\"currency\":\"HKD\"}",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "merchant": {
+            "type": "string"
+          },
+          "amount_hkd": {
+            "type": "number",
+            "minimum": 0
+          },
+          "currency": {
+            "const": "HKD"
+          }
+        },
+        "required": [
+          "merchant",
+          "amount_hkd",
+          "currency"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "id": "extract-3",
+      "prompt": "Extract a receipt to JSON: merchant Demo Store 4, total HKD 137.50. Return only merchant, amount_hkd, currency.",
+      "expected": "{\"merchant\":\"Demo Store 4\",\"amount_hkd\":137.5,\"currency\":\"HKD\"}",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "merchant": {
+            "type": "string"
+          },
+          "amount_hkd": {
+            "type": "number",
+            "minimum": 0
+          },
+          "currency": {
+            "const": "HKD"
+          }
+        },
+        "required": [
+          "merchant",
+          "amount_hkd",
+          "currency"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "id": "extract-4",
+      "prompt": "Extract a receipt to JSON: merchant Demo Store 5, total HKD 150.00. Return only merchant, amount_hkd, currency.",
+      "expected": "{\"merchant\":\"Demo Store 5\",\"amount_hkd\":150.0,\"currency\":\"HKD\"}",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "merchant": {
+            "type": "string"
+          },
+          "amount_hkd": {
+            "type": "number",
+            "minimum": 0
+          },
+          "currency": {
+            "const": "HKD"
+          }
+        },
+        "required": [
+          "merchant",
+          "amount_hkd",
+          "currency"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "id": "extract-5",
+      "prompt": "Extract a receipt to JSON: merchant Demo Store 6, total HKD 162.50. Return only merchant, amount_hkd, currency.",
+      "expected": "{\"merchant\":\"Demo Store 6\",\"amount_hkd\":162.5,\"currency\":\"HKD\"}",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "merchant": {
+            "type": "string"
+          },
+          "amount_hkd": {
+            "type": "number",
+            "minimum": 0
+          },
+          "currency": {
+            "const": "HKD"
+          }
+        },
+        "required": [
+          "merchant",
+          "amount_hkd",
+          "currency"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "id": "extract-6",
+      "prompt": "Extract a receipt to JSON: merchant Demo Store 7, total HKD 175.00. Return only merchant, amount_hkd, currency.",
+      "expected": "{\"merchant\":\"Demo Store 7\",\"amount_hkd\":175.0,\"currency\":\"HKD\"}",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "merchant": {
+            "type": "string"
+          },
+          "amount_hkd": {
+            "type": "number",
+            "minimum": 0
+          },
+          "currency": {
+            "const": "HKD"
+          }
+        },
+        "required": [
+          "merchant",
+          "amount_hkd",
+          "currency"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "id": "extract-7",
+      "prompt": "Extract a receipt to JSON: merchant Demo Store 8, total HKD 187.50. Return only merchant, amount_hkd, currency.",
+      "expected": "{\"merchant\":\"Demo Store 8\",\"amount_hkd\":187.5,\"currency\":\"HKD\"}",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "merchant": {
+            "type": "string"
+          },
+          "amount_hkd": {
+            "type": "number",
+            "minimum": 0
+          },
+          "currency": {
+            "const": "HKD"
+          }
+        },
+        "required": [
+          "merchant",
+          "amount_hkd",
+          "currency"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "id": "extract-8",
+      "prompt": "Extract a receipt to JSON: merchant Demo Store 9, total HKD 200.00. Return only merchant, amount_hkd, currency.",
+      "expected": "{\"merchant\":\"Demo Store 9\",\"amount_hkd\":200.0,\"currency\":\"HKD\"}",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "merchant": {
+            "type": "string"
+          },
+          "amount_hkd": {
+            "type": "number",
+            "minimum": 0
+          },
+          "currency": {
+            "const": "HKD"
+          }
+        },
+        "required": [
+          "merchant",
+          "amount_hkd",
+          "currency"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "id": "extract-9",
+      "prompt": "Extract a receipt to JSON: merchant Demo Store 10, total HKD 212.50. Return only merchant, amount_hkd, currency.",
+      "expected": "{\"merchant\":\"Demo Store 10\",\"amount_hkd\":212.5,\"currency\":\"HKD\"}",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "merchant": {
+            "type": "string"
+          },
+          "amount_hkd": {
+            "type": "number",
+            "minimum": 0
+          },
+          "currency": {
+            "const": "HKD"
+          }
+        },
+        "required": [
+          "merchant",
+          "amount_hkd",
+          "currency"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "id": "extract-10",
+      "prompt": "Extract a receipt to JSON: merchant Demo Store 11, total HKD 225.00. Return only merchant, amount_hkd, currency.",
+      "expected": "{\"merchant\":\"Demo Store 11\",\"amount_hkd\":225.0,\"currency\":\"HKD\"}",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "merchant": {
+            "type": "string"
+          },
+          "amount_hkd": {
+            "type": "number",
+            "minimum": 0
+          },
+          "currency": {
+            "const": "HKD"
+          }
+        },
+        "required": [
+          "merchant",
+          "amount_hkd",
+          "currency"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "id": "extract-11",
+      "prompt": "Extract a receipt to JSON: merchant Demo Store 12, total HKD 237.50. Return only merchant, amount_hkd, currency.",
+      "expected": "{\"merchant\":\"Demo Store 12\",\"amount_hkd\":237.5,\"currency\":\"HKD\"}",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "merchant": {
+            "type": "string"
+          },
+          "amount_hkd": {
+            "type": "number",
+            "minimum": 0
+          },
+          "currency": {
+            "const": "HKD"
+          }
+        },
+        "required": [
+          "merchant",
+          "amount_hkd",
+          "currency"
+        ],
+        "additionalProperties": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "use_judge": true,
+  "judge_base_url": "https://api.openai.com/v1",
+  "judge_model": "SET-REAL-MODEL-ID",
+  "budget_usd": 2,
+  "target_call_cap_usd": 0.01,
+  "judge_call_cap_usd": 0.01,
+  "max_calls": 70,
+  "max_judge_calls": 100,
+  "concurrency": 2,
+  "timeout_s": 30,
+  "min_pairs": 10
+}

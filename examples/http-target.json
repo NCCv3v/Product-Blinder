@@ -1,0 +1,13 @@
+{
+  "kind": "http",
+  "url": "http://127.0.0.1:9000/evaluate",
+  "input_path": "request.prompt",
+  "output_path": "result.answer",
+  "body": {
+    "request": {},
+    "temperature": 0
+  },
+  "model": "your-target-model",
+  "prompt_version": "support-v1",
+  "revision": "app-commit-hash"
+}

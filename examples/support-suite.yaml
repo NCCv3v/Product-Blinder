@@ -1,0 +1,151 @@
+{
+  "name": "Synthetic evidence-based support / RAG",
+  "version": "0.2",
+  "description": "Synthetic local fixture, not a live model. Twelve authored support cases; wording repeats so real independence is limited.",
+  "cases": [
+    {
+      "id": "support-0-refund",
+      "prompt": "Case 0: Use only the following evidence: Refunds are available within 30 days. What is the refund window?",
+      "expected": "Refunds are available within 30 days.",
+      "evidence": [
+        "Refunds are available within 30 days."
+      ],
+      "must_include": [
+        "Refunds are available within 30 days."
+      ],
+      "max_latency_ms": 5000
+    },
+    {
+      "id": "support-1-support",
+      "prompt": "Case 1: Use only the following evidence: Contact support@example.test. Where should I contact support?",
+      "expected": "Contact support@example.test.",
+      "evidence": [
+        "Contact support@example.test."
+      ],
+      "must_include": [
+        "Contact support@example.test."
+      ],
+      "max_latency_ms": 5000
+    },
+    {
+      "id": "support-2-currency",
+      "prompt": "Case 2: Use only the following evidence: The supported currency is HKD. What is the settlement currency?",
+      "expected": "The supported currency is HKD.",
+      "evidence": [
+        "The supported currency is HKD."
+      ],
+      "must_include": [
+        "The supported currency is HKD."
+      ],
+      "max_latency_ms": 5000
+    },
+    {
+      "id": "support-3-delivery",
+      "prompt": "Case 3: Use only the following evidence: Delivery takes 3 business days. What is the delivery estimate?",
+      "expected": "Delivery takes 3 business days.",
+      "evidence": [
+        "Delivery takes 3 business days."
+      ],
+      "must_include": [
+        "Delivery takes 3 business days."
+      ],
+      "max_latency_ms": 5000
+    },
+    {
+      "id": "support-4-refund",
+      "prompt": "Case 4: Use only the following evidence: Refunds are available within 30 days. What is the refund window?",
+      "expected": "Refunds are available within 30 days.",
+      "evidence": [
+        "Refunds are available within 30 days."
+      ],
+      "must_include": [
+        "Refunds are available within 30 days."
+      ],
+      "max_latency_ms": 5000
+    },
+    {
+      "id": "support-5-support",
+      "prompt": "Case 5: Use only the following evidence: Contact support@example.test. Where should I contact support?",
+      "expected": "Contact support@example.test.",
+      "evidence": [
+        "Contact support@example.test."
+      ],
+      "must_include": [
+        "Contact support@example.test."
+      ],
+      "max_latency_ms": 5000
+    },
+    {
+      "id": "support-6-currency",
+      "prompt": "Case 6: Use only the following evidence: The supported currency is HKD. What is the settlement currency?",
+      "expected": "The supported currency is HKD.",
+      "evidence": [
+        "The supported currency is HKD."
+      ],
+      "must_include": [
+        "The supported currency is HKD."
+      ],
+      "max_latency_ms": 5000
+    },
+    {
+      "id": "support-7-delivery",
+      "prompt": "Case 7: Use only the following evidence: Delivery takes 3 business days. What is the delivery estimate?",
+      "expected": "Delivery takes 3 business days.",
+      "evidence": [
+        "Delivery takes 3 business days."
+      ],
+      "must_include": [
+        "Delivery takes 3 business days."
+      ],
+      "max_latency_ms": 5000
+    },
+    {
+      "id": "support-8-refund",
+      "prompt": "Case 8: Use only the following evidence: Refunds are available within 30 days. What is the refund window?",
+      "expected": "Refunds are available within 30 days.",
+      "evidence": [
+        "Refunds are available within 30 days."
+      ],
+      "must_include": [
+        "Refunds are available within 30 days."
+      ],
+      "max_latency_ms": 5000
+    },
+    {
+      "id": "support-9-support",
+      "prompt": "Case 9: Use only the following evidence: Contact support@example.test. Where should I contact support?",
+      "expected": "Contact support@example.test.",
+      "evidence": [
+        "Contact support@example.test."
+      ],
+      "must_include": [
+        "Contact support@example.test."
+      ],
+      "max_latency_ms": 5000
+    },
+    {
+      "id": "support-10-currency",
+      "prompt": "Case 10: Use only the following evidence: The supported currency is HKD. What is the settlement currency?",
+      "expected": "The supported currency is HKD.",
+      "evidence": [
+        "The supported currency is HKD."
+      ],
+      "must_include": [
+        "The supported currency is HKD."
+      ],
+      "max_latency_ms": 5000
+    },
+    {
+      "id": "support-11-delivery",
+      "prompt": "Case 11: Use only the following evidence: Delivery takes 3 business days. What is the delivery estimate?",
+      "expected": "Delivery takes 3 business days.",
+      "evidence": [
+        "Delivery takes 3 business days."
+      ],
+      "must_include": [
+        "Delivery takes 3 business days."
+      ],
+      "max_latency_ms": 5000
+    }
+  ]
+}

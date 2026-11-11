@@ -1,0 +1,7 @@
+{
+  "kind": "program",
+  "command": ["python3", "examples/echo_workflow.py"],
+  "output_path": "output",
+  "model": "no-llm-echo-example",
+  "revision": "v1"
+}

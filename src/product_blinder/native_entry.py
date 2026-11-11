@@ -1,0 +1,6 @@
+"""PyInstaller entrypoint; contains no web server."""
+
+from product_blinder.desktop import main
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -1,0 +1,32 @@
+name: Native desktop and evaluation engine tests
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.11', '3.12', '3.13']
+    env:
+      QT_QPA_PLATFORM: offscreen
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: pip install -e '.[desktop,dev]'
+      - run: ruff check src tests
+      - run: pytest -q
+      - run: product-blinder --db data/ci-five.sqlite demo-five --out reports/ci-five
+      - run: product-blinder-desktop --db data/ci-five.sqlite --smoke --smoke-out reports/ci-five/native-smoke.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: five-repetition-demo-${{ matrix.python }}
+          path: reports/ci-five
+  docker-cli:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker compose build
+      - run: docker compose run --rm product-blinder --db /app/data/ci.sqlite demo-five --out /app/data/demo
