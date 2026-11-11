@@ -27,8 +27,7 @@ never enter suite/report/database exports. The worker/cancellation/shared budget
 ## Validation
 Real Qt event-loop smoke and widget rendering are included under reports/v0.7. Offscreen
 captures are diagnostic pictures of the actual app, not mockups; interactive desktop review
-is separate. No browser or remote design service was used. Linux was tested; other OS builds
-are unverified. The Python launcher requires installed dependencies and a desktop session.
+is separate. No browser or remote design service was used. The app is available on macOS, Windows and Linux via the Python source install. Interactive desktop review so far used Linux; packaged installers are not supplied yet. The Python launcher requires installed dependencies and a desktop session.
 
 ## Motion and percentage clarity (v0.4–v0.6)
 Native QTimer/QPainter activity arc rotates only during real worker activity. QPropertyAnimation

@@ -16,6 +16,7 @@
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](./LICENSE)
 [![Qt](https://img.shields.io/badge/UI-PySide6-41CD52?style=flat-square)](https://doc.qt.io/qtforpython-6/)
+[![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows%20%7C%20Linux-111111?style=flat-square)](#-quick-start)
 
 [English](./README.md) | [中文文档](./README-ZH.md)
 
@@ -25,7 +26,7 @@
 
 **Product Blinder** is a local-first native workbench for evaluating LLM products, pipelines and workflows over time. You point it at a target, freeze a test suite, and run the same suite **five complete repetitions**. The dashboard then shows quality, speed, consistency and provenance — so you can see whether a later version looks worse than a record you saved earlier.
 
-It is a **real Python desktop program** (PySide6 / Qt Widgets), not a website, HTML app or webview wrapper. There is no hosted service, account or telemetry. API keys stay on your machine, in a separate Settings panel.
+It is a **real Python desktop program** (PySide6 / Qt Widgets), available on **macOS, Windows and Linux**, not a website, HTML app or webview wrapper. There is no hosted service, account or telemetry. API keys stay on your machine, in a separate Settings panel.
 
 > You only need to: describe or import a product, pipeline or suite, then run five frozen repetitions</br>
 > Product Blinder will return: a Dashboard Report with scores, Test Case traces, Find out problem highlights, and — when you pick a saved record — a **How Dull changed 指數**
@@ -72,9 +73,11 @@ Live captures from Product Blinder **0.7** running as a native desktop app (synt
 | Tool | Version | Description | Check |
 |------|---------|-------------|-------|
 | **Python** | 3.11+ | Runtime for CLI and the native UI | `python3 --version` |
-| **Desktop environment** | Linux with Qt/system libraries | Required for the GUI (CLI works without it) | — |
+| **Desktop environment** | macOS, Windows, or Linux | Required for the GUI (CLI works without it) | — |
 
-Local verification used Linux x86-64 / Python 3.13.5.
+Product Blinder is available on **macOS, Windows and Linux**. Install from source with Python 3.11+; PySide6 provides the native window on each platform. Interactive desktop checks so far used Linux x86-64 / Python 3.13.5. No standalone `.dmg`, `.msi` or `.exe` installer is supplied yet.
+
+**macOS / Linux:**
 
 ```bash
 git clone https://github.com/NCCv3v/Product-Blinder.git
@@ -85,7 +88,18 @@ pip install -e '.[desktop,dev]'
 product-blinder-desktop
 ```
 
-This opens a native window; there is no URL. Default database: `~/.local/share/product-blinder/product-blinder.sqlite`. Use another path with `product-blinder-desktop --db /path/to/history.sqlite`.
+**Windows:**
+
+```powershell
+git clone https://github.com/NCCv3v/Product-Blinder.git
+cd Product-Blinder
+python -m venv .venv
+.\.venv\Scripts\activate
+pip install -e ".[desktop,dev]"
+product-blinder-desktop
+```
+
+This opens a native window; there is no URL. Default database: `~/.local/share/product-blinder/product-blinder.sqlite` (including under your user profile on Windows). Use another path with `product-blinder-desktop --db /path/to/history.sqlite`.
 
 Other launchers: `./scripts/product-blinder-desktop`, `python -m product_blinder.desktop`, or `product-blinder ui`.
 
@@ -170,7 +184,7 @@ QT_QPA_PLATFORM=offscreen product-blinder-desktop --smoke --smoke-out native-smo
 
 Tests use synthetic fixtures and mocked HTTP; no live API billing. See `CONTRIBUTING.md`, `DESIGN.md` and `ICONS.md`.
 
-The MIT source/wheel does not embed Qt. A standalone Linux bundle script exists (`scripts/build-linux.sh`), but a packaged binary is not supplied when the build cannot be completed on the host.
+The MIT source/wheel does not embed Qt. The app is available on macOS, Windows and Linux from this source install. A Linux bundle script exists (`scripts/build-linux.sh`), but packaged macOS/Windows/Linux installers are not supplied yet.
 
 ## 📈 Project Statistics
 

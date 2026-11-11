@@ -16,6 +16,7 @@
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](./LICENSE)
 [![Qt](https://img.shields.io/badge/UI-PySide6-41CD52?style=flat-square)](https://doc.qt.io/qtforpython-6/)
+[![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows%20%7C%20Linux-111111?style=flat-square)](#-quick-start)
 
 [English](./README.md) | [中文文档](./README-ZH.md)
 
@@ -25,7 +26,7 @@
 
 **Product Blinder** 是一套本地優先的原生工作台，用來評測 LLM 產品、管線與工作流程隨時間的品質變化。你指定評測對象、凍結測試套件，並對同一套件執行 **五次完整重複**。儀表板會顯示品質、速度、一致性與來源資訊，方便把目前的分析報告，和你先前儲存的紀錄做比較。
 
-這是真正的 **Python 桌面程式**（PySide6 / Qt Widgets），不是網站、HTML 應用或 webview 包裝。不需要託管服務、帳號或遙測。API 金鑰只留在你的電腦上，放在獨立的設定面板。
+這是真正的 **Python 桌面程式**（PySide6 / Qt Widgets），可在 **macOS、Windows 與 Linux** 使用，不是網站、HTML 應用或 webview 包裝。不需要託管服務、帳號或遙測。API 金鑰只留在你的電腦上，放在獨立的設定面板。
 
 > 你只需：描述或匯入產品、管線或測試套件，然後執行五次凍結重複評測</br>
 > Product Blinder 會回傳：含分數、Test Case 軌跡、Find out problem 重點的 Dashboard Report；當你選取一筆已儲存紀錄時，還會計算 **How Dull changed 指數**
@@ -72,9 +73,11 @@
 | 工具 | 版本 | 說明 | 檢查方式 |
 |------|------|------|----------|
 | **Python** | 3.11+ | CLI 與原生介面的執行環境 | `python3 --version` |
-| **桌面環境** | 具備 Qt／系統函式庫的 Linux | 圖形介面需要；CLI 可單獨使用 | — |
+| **桌面環境** | macOS、Windows 或 Linux | 圖形介面需要；CLI 可單獨使用 | — |
 
-本地驗證環境為 Linux x86-64 / Python 3.13.5。
+Product Blinder 可在 **macOS、Windows 與 Linux** 使用。以 Python 3.11+ 從源碼安裝即可；PySide6 會在各平台開啟原生視窗。互動式桌面檢查目前是在 Linux x86-64 / Python 3.13.5 完成。尚未提供獨立的 `.dmg`、`.msi` 或 `.exe` 安裝檔。
+
+**macOS / Linux：**
 
 ```bash
 git clone https://github.com/NCCv3v/Product-Blinder.git
@@ -85,7 +88,18 @@ pip install -e '.[desktop,dev]'
 product-blinder-desktop
 ```
 
-這會開啟原生視窗，沒有網址。預設資料庫：`~/.local/share/product-blinder/product-blinder.sqlite`。也可用 `product-blinder-desktop --db /path/to/history.sqlite` 指定路徑。
+**Windows：**
+
+```powershell
+git clone https://github.com/NCCv3v/Product-Blinder.git
+cd Product-Blinder
+python -m venv .venv
+.\.venv\Scripts\activate
+pip install -e ".[desktop,dev]"
+product-blinder-desktop
+```
+
+這會開啟原生視窗，沒有網址。預設資料庫：`~/.local/share/product-blinder/product-blinder.sqlite`（在 Windows 上也位於使用者目錄下）。也可用 `product-blinder-desktop --db /path/to/history.sqlite` 指定路徑。
 
 其他啟動方式：`./scripts/product-blinder-desktop`、`python -m product_blinder.desktop`，或 `product-blinder ui`。
 
@@ -170,7 +184,7 @@ QT_QPA_PLATFORM=offscreen product-blinder-desktop --smoke --smoke-out native-smo
 
 測試使用合成 fixture 與模擬 HTTP，不會產生線上 API 費用。詳見 `CONTRIBUTING.md`、`DESIGN.md` 與 `ICONS.md`。
 
-MIT 源碼／wheel 不內嵌 Qt。雖然提供 Linux 打包腳本（`scripts/build-linux.sh`），但在主機無法完成建置時，並不附帶獨立執行檔。
+MIT 源碼／wheel 不內嵌 Qt。本程式可在 macOS、Windows 與 Linux 以源碼安裝使用。雖有 Linux 打包腳本（`scripts/build-linux.sh`），但尚未提供 macOS／Windows／Linux 的獨立安裝檔。
 
 ## 📈 項目統計
 
