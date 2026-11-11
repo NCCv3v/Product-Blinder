@@ -4,7 +4,7 @@ Findings come only from completed observations. Nothing is invented, and a
 local heuristic tester is never labelled as a paid model.
 """
 
-from .activity import score_percent, score_transition
+from .scores import score_percent, score_transition
 from .evaluators import DESCRIPTIONS, ROLES
 
 CHECKS = {

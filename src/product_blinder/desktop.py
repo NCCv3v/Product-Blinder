@@ -43,7 +43,8 @@ from PySide6.QtWidgets import (
 )
 from matplotlib.figure import Figure
 from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg
-from .activity import ActivityStatus, score_percent, score_transition
+from .activity import ActivityStatus
+from .scores import score_percent, score_transition
 from .analysis import analysis_markdown, context_line
 from .records import dull_change_view, record_snapshot
 from .icons import icon, apply_icon, icon_label

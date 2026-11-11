@@ -17,7 +17,7 @@ from datetime import datetime
 import uuid
 from zoneinfo import ZoneInfo
 
-from .activity import score_transition
+from .scores import score_transition
 from .security import Secrets
 
 EPS = 1e-9

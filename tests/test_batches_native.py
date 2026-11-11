@@ -473,7 +473,7 @@ def test_v03_cancelled_dashboard_never_fabricates_score(qt_app, tmp_path):
     ],
 )
 def test_v04_percentages_are_scores_not_mislabelled_deltas(baseline, current, text):
-    from product_blinder.activity import score_transition
+    from product_blinder.scores import score_transition
 
     assert score_transition(baseline, current) == text
 
