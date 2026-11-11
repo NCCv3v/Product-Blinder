@@ -18,4 +18,4 @@ mkdir -p "$WORK"
  --exclude-module PySide6.QtQml --exclude-module PySide6.QtQuick \
  --exclude-module tkinter --exclude-module scipy --exclude-module IPython \
  src/product_blinder/native_entry.py
-cp README.md LICENSE ATTRIBUTION.md "$OUT/ProductBlinder-v0.6/"
+cp README.md LICENSE "$OUT/ProductBlinder-v0.6/"

@@ -172,16 +172,6 @@ Tests use synthetic fixtures and mocked HTTP; no live API billing. See `CONTRIBU
 
 The MIT source/wheel does not embed Qt. A standalone Linux bundle script exists (`scripts/build-linux.sh`), but a packaged binary is not supplied when the build cannot be completed on the host.
 
-## 📄 Acknowledgments
-
-Product Blinder is original MIT-licensed source. No reference repository was cloned and no upstream code was incorporated. Read-only concept review (11 November 2026, HKT):
-
-- [LangTest](https://github.com/PacificAI/langtest) (Apache-2.0)
-- [DeepEval](https://github.com/confident-ai/deepeval) (Apache-2.0)
-- [MiroFish](https://github.com/666ghj/MiroFish) (AGPL-3.0) — conceptual specialist/report roles only
-
-These projects are not runtime dependencies. See `ATTRIBUTION.md` for reviewed links. Qt/PySide is a separately licensed runtime.
-
 ## 📈 Project Statistics
 
 [![Star History Chart](https://api.star-history.com/chart?repos=NCCv3v/Product-Blinder&type=Date)](https://www.star-history.com/#NCCv3v/Product-Blinder&Date)

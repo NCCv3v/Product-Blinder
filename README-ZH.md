@@ -172,16 +172,6 @@ QT_QPA_PLATFORM=offscreen product-blinder-desktop --smoke --smoke-out native-smo
 
 MIT 源碼／wheel 不內嵌 Qt。雖然提供 Linux 打包腳本（`scripts/build-linux.sh`），但在主機無法完成建置時，並不附帶獨立執行檔。
 
-## 📄 致謝
-
-Product Blinder 為原創的 MIT 授權源碼。沒有複製任何參考儲存庫，也沒有併入上游程式碼。概念性唯讀檢視日期為 2026 年 11 月 11 日（香港時間）：
-
-- [LangTest](https://github.com/PacificAI/langtest)（Apache-2.0）
-- [DeepEval](https://github.com/confident-ai/deepeval)（Apache-2.0）
-- [MiroFish](https://github.com/666ghj/MiroFish)（AGPL-3.0）— 僅參考專門角色／報告分工的概念
-
-上述專案不是執行時依賴。已檢視的連結見 `ATTRIBUTION.md`。Qt/PySide 為另行授權的執行環境。
-
 ## 📈 項目統計
 
 [![Star History Chart](https://api.star-history.com/chart?repos=NCCv3v/Product-Blinder&type=Date)](https://www.star-history.com/#NCCv3v/Product-Blinder&Date)
